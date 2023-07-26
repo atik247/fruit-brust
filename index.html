@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>Fruit Brust</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f0822789bf.js" crossorigin="anonymous"></script>
     <!-- Tailwind and Daisy UI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
@@ -27,19 +29,61 @@
     </style>
   </head>
   <body class="font-poppins">
-    <header class="mx-auto md:px-16">
+
         <!-- Navbar Started Here -->
-        <nav>
-            <div class="navbar bg-[#F85559] rounded-full">
-                <ul class="menu menu-horizontal px-1 text-white text-xl">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Shop</li>
-                    <li>All Fruits</li>
-                </ul>
-            </div>
-            
-        </nav>
+  
+        <section class="mx-auto md:px-16 lg:px-24 lg:max-w-screen my-10">
+          <nav>
+              <div class="navbar bg-[#F85559] rounded-full">
+                  <div class="navbar-start hidden lg:flex">
+                      <ul class="menu menu-horizontal px-1 text-xl text-white">
+                          <li><a>Home</a></li>
+                          <li><a>About Us</a></li>
+                          <li><a>Shop</a></li>
+                          <li><a>All Fruits</a></li>
+                      </ul>
+                  </div>
+                  <div class="navbar-center gap-2">
+                      <img src="./images/logo.png" alt="">
+                      <a class="cursor-pointer font-bold text-3xl text-white">Fruit Burst</a>
+                  </div>
+                  <div class="navbar-end items-center">
+                      <a class="relative hidden lg:flex">
+                          <input class="w-72 rounded-full p-2 mr-3 text-black" type="text"  placeholder="Search Here">
+                          <div class="absolute top-1 right-8 text-xl cursor-pointer">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                          </div>
+                      </a>
+                      <div class="dropdown lg:hidden">
+                          <label tabindex="0" class="btn btn-ghost lg:hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                  class="lg:inline-block w-5 h-5 stroke-white">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                      d="M4 6h16M4 12h16M4 18h16"></path>
+                              </svg>
+                          </label>
+                          <ul tabindex="0"
+                              class="menu menu-sm dropdown-content mt-4 z-[2] p-2 shadow bg-base-100 rounded-box w-48">
+                              <li><a>Home</a></li>
+                              <li><a>About Us</a></li>
+                              <li><a>Shop</a></li>
+                              <li><a>All Fruits</a></li>
+                              <li>
+                                  <a class="relative">
+                                      <input class="rounded-full text-black" type="text"
+                                          placeholder="Search Here">
+                                      <div class=" absolute top-1.5 right-6 cursor-pointer">
+                                          <i class="fa-solid fa-magnifying-glass"></i>
+                                      </div>
+                                  </a>
+                              </li>
+                          </ul>
+
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </section>
     </header>
     <main>
                     <!-- Deal Section -->
@@ -115,13 +159,11 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
-                            
                             <div class="modal-action">
                             <button class="btn">Close</button>
                             <button class="btn bg-[#F85559] text-white">Buy Now</button>
                             </div>
                             </div>
-                            
                         </form>
                         </dialog>
                       </div>
